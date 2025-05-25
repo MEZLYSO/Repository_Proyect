@@ -1,12 +1,13 @@
-import { useEffect, useState } from "react"
-import axios from "axios"
+import { BrowserRouter } from "react-router-dom"
+import InnerApp from "./InnerApp"
 
 function App() {
 
+
   return (
-    <>
-      <h1>Hi</h1>
-    </>
+    <BrowserRouter>
+      <InnerApp />
+    </BrowserRouter >
   )
 }
 
