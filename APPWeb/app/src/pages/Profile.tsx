@@ -1,7 +1,7 @@
 function Profile() {
   return (
-    <div>
-      This is profile
+    <div className="h-dvh">
+      <h1 className="ml-2 pt-2 font-bold text-3xl">Profile</h1>
     </div>
   )
 }

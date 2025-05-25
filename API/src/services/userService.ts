@@ -7,6 +7,11 @@ class userService {
     return users;
   }
 
+  async getUser() {
+    const users = await db.query<RowDataPacket[]>("SELECT * FROM user");
+    return users;
+  }
+
 }
 
 export default new userService();
