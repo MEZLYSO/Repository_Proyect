@@ -19,10 +19,14 @@ const useSession = () => {
     })
   }
 
-  const handleSubmit = (e: any) => {
+  const handleSubmit = async (e: any) => {
     e.preventDefault()
-    startSession(userLogin.email)
-    console.log(userLogin)
+    try {
+      const response = await startSession(userLogin.email, userLogin.password)
+      const user = response[0]
+      console.log(user);
+    } catch (err) { }
+
   }
 
   return { handleClick, userLogin, handleSubmit }

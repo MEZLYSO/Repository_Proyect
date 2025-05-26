@@ -2,7 +2,7 @@ import { Navigate, Outlet } from "react-router-dom"
 import Navbar from "../components/Navbar"
 
 function PrivateGuard() {
-  const token = true
+  const token = localStorage.getItem("user")
   return token ? (<>
     <Outlet />
     <Navbar />
