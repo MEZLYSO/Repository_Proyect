@@ -10,7 +10,7 @@ function PageWrapper({ children }: any) {
         scale: 1,
         transition: {
           type: 'tween',
-          duration: 0.25,
+          duration: 0.30,
           ease: [0.4, 0.0, 0.2, 1]
         }
       }}

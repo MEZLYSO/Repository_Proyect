@@ -1,5 +1,8 @@
 import { useNavigate } from "react-router-dom"
 import useUser from "../hooks/useUser"
+import { PublicPages } from "../types/pages"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { faRightFromBracket } from "@fortawesome/free-solid-svg-icons/faRightFromBracket"
 
 function Profile() {
 
@@ -9,15 +12,15 @@ function Profile() {
 
   const deleteToken = () => {
     localStorage.removeItem("user")
-    navigate("/", { replace: true })
+    navigate(PublicPages.HOME, { replace: true })
   }
 
   return (
-    <div className="h-dvh bg-black">
-      <h1 className="ml-2 pt-2 font-bold text-3xl text-white">Profile</h1>
-      <div className="flex flex-col justify-center px-10 gap-2">
+    <div className="h-dvh bg-black text-white">
+      <h1 className="ml-2 pt-2 font-bold text-3xl">Profile</h1>
+      <div className="flex flex-col justify-center px-5 mt-5 gap4">
         <div
-          className="shadow-sm shadow-black p-5 rounded-2xl bg-white"
+          className="p-5 rounded-2xl bg-white text-black"
         >
           <p>{user.name}</p>
           <p>{user.surname1}</p>
@@ -26,8 +29,8 @@ function Profile() {
         </div>
         <button
           onClick={deleteToken}
-          className="bg-red-500 text-white rounded-4xl">
-          Close Session
+          className="bg-red-500 text-white rounded-4xl mx-10 font-bold py-4">
+          Close Session <FontAwesomeIcon icon={faRightFromBracket} />
         </button>
 
 

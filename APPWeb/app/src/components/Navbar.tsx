@@ -3,6 +3,7 @@ import { faHome } from "@fortawesome/free-solid-svg-icons"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faUser } from "@fortawesome/free-solid-svg-icons/faUser"
 import { useState } from "react"
+import { PrivatePages } from "../types/pages"
 
 function Navbar() {
 
@@ -16,13 +17,13 @@ function Navbar() {
         <Link
           onClick={() => setActiveItem(`home`)}
           className={`${activeItem === `home` ? `bg-black text-white` : `text-black`} rounded-4xl px-4 py-2 transition-all`}
-          to="/dashboard">
+          to={PrivatePages.DASHBOARD}>
           <FontAwesomeIcon icon={faHome} size="xl" /> Home
         </Link>
         <Link
           onClick={() => setActiveItem(`profile`)}
           className={`${activeItem === `profile` ? `bg-black text-white` : `text-black`} rounded-4xl px-5 py-2 transition-all`}
-          to="/profile">
+          to={PrivatePages.PROFILE}>
           <FontAwesomeIcon icon={faUser} size="xl" /> Profile
         </Link>
 

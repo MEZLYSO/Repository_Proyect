@@ -1,5 +1,6 @@
 export const PrivatePages = {
-  "DASHBOARD": "/dashboard"
+  "DASHBOARD": "/dashboard",
+  "PROFILE": "/profile"
 }
 
 export const PublicPages = {
