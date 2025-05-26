@@ -27,7 +27,6 @@ const useSession = () => {
     e.preventDefault()
     try {
       const response = await startSession(userLogin.email, userLogin.password)
-      console.log(response);
       localStorage.setItem("user", JSON.stringify(response.data[0]))
       navigate(PrivatePages.DASHBOARD, { replace: true })
     } catch (err) { }

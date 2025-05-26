@@ -18,7 +18,7 @@ function Profile() {
   return (
     <div className="h-dvh bg-black text-white">
       <h1 className="ml-2 pt-2 font-bold text-3xl">Profile</h1>
-      <div className="flex flex-col justify-center px-5 mt-5 gap4">
+      <div className="flex flex-col justify-center px-5 mt-5 gap-4">
         <div
           className="p-5 rounded-2xl bg-white text-black"
         >

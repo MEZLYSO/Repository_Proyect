@@ -16,15 +16,15 @@ function Navbar() {
       <div className="bg-white flex justify-evenly items-center gap-2 h-15 rounded-4xl border-2 border-black">
         <Link
           onClick={() => setActiveItem(`home`)}
-          className={`${activeItem === `home` ? `bg-black text-white` : `text-black`} rounded-4xl px-4 py-2 transition-all`}
+          className={`${activeItem === `home` ? `bg-black text-white` : `text-black`} rounded-4xl px-4 py-2 transition-all flex`}
           to={PrivatePages.DASHBOARD}>
-          <FontAwesomeIcon icon={faHome} size="xl" /> Home
+          <FontAwesomeIcon icon={faHome} size="xl" /> <p className="hidden ml-2 md:flex">Home</p>
         </Link>
         <Link
           onClick={() => setActiveItem(`profile`)}
-          className={`${activeItem === `profile` ? `bg-black text-white` : `text-black`} rounded-4xl px-5 py-2 transition-all`}
+          className={`${activeItem === `profile` ? `bg-black text-white` : `text-black`} rounded-4xl px-5 py-2 transition-all flex`}
           to={PrivatePages.PROFILE}>
-          <FontAwesomeIcon icon={faUser} size="xl" /> Profile
+          <FontAwesomeIcon icon={faUser} size="xl" /> <p className="hidden ml-2 md:flex">Profie</p>
         </Link>
 
       </div>

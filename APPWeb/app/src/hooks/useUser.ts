@@ -16,8 +16,8 @@ const useUser = () => {
   const [user, setUser] = useState<userDataType>(initialState)
 
   useEffect(() => {
-    const exist = localStorage.getItem("user") ? true : false
-    setUser(exist ? JSON.parse(localStorage.getItem("user")) : initialState)
+    const userData = localStorage.getItem("user")
+    setUser(userData ? JSON.parse(userData) : initialState)
   }, [])
 
   return { user }
