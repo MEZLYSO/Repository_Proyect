@@ -11,7 +11,7 @@ function Navbar() {
 
   return (
     <nav
-      className="fixed bottom-0 w-full py-5 px-20">
+      className="fixed bottom-0 w-full py-5 px-22">
       <div className="bg-white flex justify-evenly items-center gap-2 h-15 rounded-4xl border-2 border-black">
         <Link
           onClick={() => setActiveItem(`home`)}

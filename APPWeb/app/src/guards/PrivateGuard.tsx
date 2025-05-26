@@ -1,5 +1,6 @@
 import { Navigate, Outlet } from "react-router-dom"
 import Navbar from "../components/Navbar"
+import { PublicPages } from "../types/pages"
 
 function PrivateGuard() {
   const token = localStorage.getItem("user")
@@ -8,7 +9,7 @@ function PrivateGuard() {
     <Navbar />
   </>
   ) :
-    <Navigate replace to="/" />
+    <Navigate replace to={PublicPages.HOME} />
 }
 
 export default PrivateGuard

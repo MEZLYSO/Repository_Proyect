@@ -7,6 +7,7 @@ import Signup from "./pages/Signup";
 import Profile from "./pages/Profile";
 import PrivateGuard from "./guards/PrivateGuard";
 import PageWrapper from "./components/PageWrapper";
+import PublicGuard from "./guards/PublicGuard";
 
 function InnerApp() {
   const location = useLocation();
@@ -14,9 +15,11 @@ function InnerApp() {
   return (
     <AnimatePresence mode="wait">
       <Routes location={location} key={location.key}>
-        <Route path="/" element={<PageWrapper><Home /></PageWrapper>} />
-        <Route path="/login" element={<PageWrapper><Login /></PageWrapper>} />
-        <Route path="/signup" element={<PageWrapper><Signup /></PageWrapper>} />
+        <Route element={<PublicGuard />}>
+          <Route path="/" element={<PageWrapper><Home /></PageWrapper>} />
+          <Route path="/login" element={<PageWrapper><Login /></PageWrapper>} />
+          <Route path="/signup" element={<PageWrapper><Signup /></PageWrapper>} />
+        </Route>
 
         <Route element={<PrivateGuard />}>
           <Route path="/dashboard" element={<PageWrapper><Dashboard /></PageWrapper>} />
